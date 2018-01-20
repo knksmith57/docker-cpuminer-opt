@@ -1,0 +1,12 @@
+version: '3'
+services:
+  miner:
+    image: knksmith57/cpuminer-opt
+    build:
+      context: .
+    environment:
+      algo: 'cryptonight'
+      network: 'nicehash'
+      wallet: '3MAQfw2huu7j8uYscD9SLeLdzUz8TbLHtX'
+    volumes:
+    - './entrypoint.sh:/usr/local/bin/entrypoint.sh:ro'
